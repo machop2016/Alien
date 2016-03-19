@@ -4,6 +4,10 @@
 #include <head.h>
 
 int main(){
+  datos();
+  imprimir();
+}
+void datos(void){
 struct alien_t *lista_aliens;
 struct alien_t *tmp;
 struct planeta_t *lista_planetas;
@@ -28,17 +32,6 @@ strcpy(lista_idioma->nombre,"Namekuseiano");
 lista_idioma->simbolo=28;
 lista_idioma->tipo='A';
 lista_idioma->planeta=lista_planetas;
-printf("\nPrimer elemento de la lista \n");
-printf("%s \n",lista_aliens->nombre);
-printf("%d \n",lista_aliens->id);
-printf("%s \n",lista_planetas->nombre);
-printf("%d \n",lista_planetas->starwars_code);
-printf("%c \n",lista_planetas->agua);
-printf("%c \n",lista_planetas->oxigeno);
-printf("%s \n",lista_idioma->nombre);
-printf("%d \n",lista_idioma->simbolo);
-printf("%c \n",lista_idioma->tipo);
-printf("%s \n",lista_idioma->planeta->nombre);
 strcpy(tmp->nombre,"Alien2:Goku");
 tmp->id=2015090748;
 strcpy(tmp1->nombre,"Hut");
@@ -52,6 +45,19 @@ tmp2->planeta=lista_planetas;
 (*lista_planetas).Siguiente=tmp1;
 (*lista_aliens).Siguiente=tmp;
 (*lista_idioma).Siguiente=tmp2;
+}
+void imprimir(void){
+printf("\nPrimer elemento de la lista \n");
+printf("%s \n",lista_aliens->nombre);
+printf("%d \n",lista_aliens->id);
+printf("%s \n",lista_planetas->nombre);
+printf("%d \n",lista_planetas->starwars_code);
+printf("%c \n",lista_planetas->agua);
+printf("%c \n",lista_planetas->oxigeno);
+printf("%s \n",lista_idioma->nombre);
+printf("%d \n",lista_idioma->simbolo);
+printf("%c \n",lista_idioma->tipo);
+printf("%s \n",lista_idioma->planeta->nombre);
 printf("\nSiguiente de la lista \n");
 printf("%s \n",(*lista_aliens).Siguiente->nombre);
 printf("%d \n",(*lista_aliens).Siguiente->id);
